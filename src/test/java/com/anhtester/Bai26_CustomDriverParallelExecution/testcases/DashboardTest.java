@@ -5,6 +5,7 @@ import com.anhtester.Bai26_CustomDriverParallelExecution.pages.DashboardPage;
 import com.anhtester.Bai26_CustomDriverParallelExecution.pages.LoginPage;
 import com.anhtester.common.BaseTest;
 import com.anhtester.constants.ConfigData;
+import com.anhtester.helpers.PropertiesHelper;
 import org.testng.annotations.Test;
 
 public class DashboardTest extends BaseTest {
@@ -29,7 +30,7 @@ public class DashboardTest extends BaseTest {
     @Test
     public void testAdminRole(){
         loginPage = new LoginPage();
-        dashboardPage = loginPage.loginCRM("admin@example.com", "123456");
+        dashboardPage = loginPage.loginCRM(PropertiesHelper.getValue("email"), PropertiesHelper.getValue("password"));
         loginPage.verifyLoginSuccess();
         dashboardPage.verifyMenuReportDisplay();
     }
