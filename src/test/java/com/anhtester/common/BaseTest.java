@@ -19,7 +19,7 @@ public class BaseTest {
     @BeforeMethod
     @Parameters({"browser"})
     public void createDriver(@Optional("chrome") String browserName) {
-        WebDriver driver = setupBrowser(PropertiesHelper.getValue("browser")); //Khởi tạo loại browser và gán vào driver
+        WebDriver driver = setupBrowser(browserName); //Khởi tạo loại browser và gán vào driver
         //new WebUI(driver);
         DriverManager.setDriver(driver); //Mang giá trị driver đã khởi tạo vào trong ThreadLocal
     }

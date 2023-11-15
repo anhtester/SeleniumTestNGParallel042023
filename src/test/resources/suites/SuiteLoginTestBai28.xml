@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Parallel Suite All" verbose="1">
+
+    <test name="Regression Test Parallel" parallel="methods">
+        <parameter name="browser" value="edge"></parameter>
+        <classes>
+            <class name="com.anhtester.Bai28_ReadExcelFile.LoginTest"/>
+        </classes>
+    </test>
+
+</suite>
