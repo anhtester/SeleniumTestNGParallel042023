@@ -28,8 +28,7 @@ public class ExcelHelper {
             File f = new File(ExcelPath);
 
             if (!f.exists()) {
-                f.createNewFile();
-                System.out.println("File doesn't exist, so created!");
+                System.out.println("File doesn't exist.");
             }
 
             fis = new FileInputStream(ExcelPath);
@@ -52,9 +51,9 @@ public class ExcelHelper {
         }
     }
 
-    public String getCellData(int colnum, int rownum) {
+    public String getCellData(int columnIndex, int rowIndex) {
         try {
-            cell = sh.getRow(rownum).getCell(colnum);
+            cell = sh.getRow(rowIndex).getCell(columnIndex);
             String CellData = null;
             switch (cell.getCellType()) {
                 case STRING:
@@ -81,21 +80,21 @@ public class ExcelHelper {
     }
 
     //Gọi ra hàm này nè
-    public String getCellData(String columnName, int rownum) {
-        return getCellData(columns.get(columnName), rownum);
+    public String getCellData(String columnName, int rowIndex) {
+        return getCellData(columns.get(columnName), rowIndex);
     }
 
     //set by column index
-    public void setCellData(String text, int colNumber, int rowNumber) {
+    public void setCellData(String text, int columnIndex, int rowIndex) {
         try {
-            row = sh.getRow(rowNumber);
+            row = sh.getRow(rowIndex);
             if (row == null) {
-                row = sh.createRow(rowNumber);
+                row = sh.createRow(rowIndex);
             }
-            cell = row.getCell(colNumber);
+            cell = row.getCell(columnIndex);
 
             if (cell == null) {
-                cell = row.createCell(colNumber);
+                cell = row.createCell(columnIndex);
             }
             cell.setCellValue(text);
 
@@ -116,11 +115,11 @@ public class ExcelHelper {
     }
 
     //set by column name
-    public void setCellData(String text, String columnName, int rowNumber) {
+    public void setCellData(String text, String columnName, int rowIndex) {
         try {
-            row = sh.getRow(rowNumber);
+            row = sh.getRow(rowIndex);
             if (row == null) {
-                row = sh.createRow(rowNumber);
+                row = sh.createRow(rowIndex);
             }
             cell = row.getCell(columns.get(columnName));
 
