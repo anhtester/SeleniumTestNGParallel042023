@@ -34,9 +34,9 @@ public class ExcelHelper {
             fis = new FileInputStream(ExcelPath);
             wb = WorkbookFactory.create(fis);
             sh = wb.getSheet(SheetName);
-            //sh = wb.getSheetAt(0); //0 - index of 1st sheet
+
             if (sh == null) {
-                sh = wb.createSheet(SheetName);
+                throw new Exception("Sheet name doesn't exist.");
             }
 
             this.excelFilePath = ExcelPath;
