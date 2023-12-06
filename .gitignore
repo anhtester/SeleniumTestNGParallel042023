@@ -45,3 +45,5 @@ build/
 .idea/
 out/
 *.iml
+reports/
+report/
