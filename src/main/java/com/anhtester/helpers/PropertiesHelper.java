@@ -1,7 +1,5 @@
 package com.anhtester.helpers;
 
-import com.anhtester.helpers.SystemHelper;
-
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -20,8 +18,6 @@ public class PropertiesHelper {
         LinkedList<String> files = new LinkedList<>();
         // Add tất cả file Properties vào đây theo mẫu
         files.add("src/test/resources/configs/configs.properties");
-        files.add("src/test/resources/configs/file1.properties");
-        files.add("src/test/resources/configs/file2.properties");
 
         try {
             properties = new Properties();

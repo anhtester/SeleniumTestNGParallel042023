@@ -3,9 +3,8 @@ package com.anhtester.Bai28_ReadExcelFile;
 import com.anhtester.Bai26_CustomDriverParallelExecution.pages.DashboardPage;
 import com.anhtester.Bai26_CustomDriverParallelExecution.pages.LoginPage;
 import com.anhtester.common.BaseTest;
-import com.anhtester.constants.ConfigData;
+import com.anhtester.helpers.CaptureHelper;
 import com.anhtester.helpers.ExcelHelper;
-import com.anhtester.keywords.WebUI;
 import org.testng.annotations.Test;
 
 public class LoginTest extends BaseTest {
@@ -25,7 +24,7 @@ public class LoginTest extends BaseTest {
                 excelHelper.getCellData("password", 1)
         );
         loginPage.verifyLoginSuccess();
-        WebUI.captureScreenImage("testLoginSuccess");
+        CaptureHelper.captureScreenshot("testLoginSuccess");
         dashboardPage.logOut();
     }
 
@@ -41,7 +40,7 @@ public class LoginTest extends BaseTest {
                 excelHelper.getCellData("password", 2)
         );
         loginPage.verifyLoginFail();
-        WebUI.captureScreenImage("testLoginWithEmailInvalid");
+        CaptureHelper.captureScreenshot("testLoginWithEmailInvalid");
     }
 
     @Test
@@ -56,6 +55,6 @@ public class LoginTest extends BaseTest {
                 excelHelper.getCellData("password", 3)
         );
         loginPage.verifyLoginFail();
-        WebUI.captureScreenImage("testLoginWithPasswordInvalid");
+        CaptureHelper.captureScreenshot("testLoginWithPasswordInvalid");
     }
 }

@@ -3,9 +3,9 @@
 <suite name="Parallel Suite All" verbose="1">
 
     <test name="Regression Test Parallel" parallel="methods">
-        <parameter name="browser" value="edge"></parameter>
+        <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="com.anhtester.Bai28_ReadExcelFile.LoginTest"/>
+            <class name="com.anhtester.Bai31_TestListener.testcases.LoginTest"/>
         </classes>
     </test>
 

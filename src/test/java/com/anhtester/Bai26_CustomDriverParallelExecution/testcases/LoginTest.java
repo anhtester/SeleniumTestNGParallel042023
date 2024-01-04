@@ -3,10 +3,8 @@ package com.anhtester.Bai26_CustomDriverParallelExecution.testcases;
 import com.anhtester.Bai26_CustomDriverParallelExecution.pages.DashboardPage;
 import com.anhtester.Bai26_CustomDriverParallelExecution.pages.LoginPage;
 import com.anhtester.common.BaseTest;
-import com.anhtester.constants.ConfigData;
 import com.anhtester.dataprovider.DataProviderFactory;
-import com.anhtester.keywords.WebUI;
-import org.testng.annotations.Parameters;
+import com.anhtester.helpers.CaptureHelper;
 import org.testng.annotations.Test;
 
 public class LoginTest extends BaseTest {
@@ -19,7 +17,7 @@ public class LoginTest extends BaseTest {
         loginPage = new LoginPage();
         dashboardPage = loginPage.loginCRM(email, password);
         loginPage.verifyLoginSuccess();
-        WebUI.captureScreenImage("testLoginSuccess");
+        CaptureHelper.captureScreenshot("testLoginSuccess");
         dashboardPage.logOut();
     }
 
@@ -28,7 +26,7 @@ public class LoginTest extends BaseTest {
         loginPage = new LoginPage();
         dashboardPage = loginPage.loginCRM(email, password);
         loginPage.verifyLoginFail();
-        WebUI.captureScreenImage("testLoginWithEmailInvalid");
+        CaptureHelper.captureScreenshot("testLoginWithEmailInvalid");
     }
 
     @Test
@@ -36,6 +34,6 @@ public class LoginTest extends BaseTest {
         loginPage = new LoginPage();
         dashboardPage = loginPage.loginCRM("admin@example.com", "123");
         loginPage.verifyLoginFail();
-        WebUI.captureScreenImage("testLoginWithPasswordInvalid");
+        CaptureHelper.captureScreenshot("testLoginWithPasswordInvalid");
     }
 }
