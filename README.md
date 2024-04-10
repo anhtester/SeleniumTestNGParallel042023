@@ -1,11 +1,15 @@
 # SeleniumTestNGParallel042023
+
 Project Selenium TestNG with Parallel Execution in Page Object Model pattern of online class 04/2023
 
 ✅ Source code Selenium Maven từ bài 5 đến bài 9: https://github.com/anhtester/SeleniumMaven042023
 
 ✅ Source code Selenium TestNG POM từ bài 10 đến bài 24: https://github.com/anhtester/SeleniumMavenTestNG042023
 
-✅ Source code Selenium TestNG Parallel Execution từ bài 25 đến hết: https://github.com/anhtester/SeleniumTestNGParallel042023
+✅ Source code Selenium TestNG Parallel Execution từ bài 25 đến
+hết: https://github.com/anhtester/SeleniumTestNGParallel042023
+
+***🔥 Lưu ý: nhớ cập nhật thư viện trong pom.xml phiên bản mới nhất***
 
 🔅 Khoá học Selenium WebDriver with Java Basic to Advanced | Anh Tester
 
