@@ -45,7 +45,6 @@ build/
 .idea/
 out/
 *.iml
-reports/
 report/
 logs/
 *.log

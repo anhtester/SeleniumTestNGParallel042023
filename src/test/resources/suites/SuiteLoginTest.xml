@@ -1,8 +1,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="Parallel Suite All" verbose="1">
+<suite name="Suite Login Test" verbose="1">
 
-    <test name="Regression Test Parallel" parallel="methods">
+    <test name="Regression Test Login Parallel" parallel="methods">
         <parameter name="browser" value="chrome"/>
         <classes>
             <class name="com.anhtester.Bai31_TestListener.testcases.LoginTest"/>

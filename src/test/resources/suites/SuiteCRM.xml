@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="Regression Test" verbose="1" parallel="none">
+<suite name="Suite Regression Test CRM" verbose="1" parallel="none">
     <test name="Login Test CRM CHROME" parallel="methods">
         <parameter name="browser" value="chrome"></parameter>
         <classes>
