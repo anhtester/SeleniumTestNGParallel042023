@@ -20,8 +20,8 @@ public class LoginTest extends BaseTest {
         excelHelper.setExcelFile("src/test/resources/testdata/UsersData.xlsx", "Sheet1");
 
         dashboardPage = loginPage.loginCRM(
-                excelHelper.getCellData("email", 1),
-                excelHelper.getCellData("password", 1)
+                excelHelper.getCellData("EMAIL", 1),
+                excelHelper.getCellData("PASSWORD", 1)
         );
         loginPage.verifyLoginSuccess();
         CaptureHelper.captureScreenshot("testLoginSuccess");
@@ -36,8 +36,8 @@ public class LoginTest extends BaseTest {
         excelHelper.setExcelFile("src/test/resources/testdata/UsersData.xlsx", "Sheet1");
 
         dashboardPage = loginPage.loginCRM(
-                excelHelper.getCellData("email", 2),
-                excelHelper.getCellData("password", 2)
+                excelHelper.getCellData("EMAIL", 2),
+                excelHelper.getCellData("PASSWORD", 2)
         );
         loginPage.verifyLoginFail();
         CaptureHelper.captureScreenshot("testLoginWithEmailInvalid");
@@ -51,8 +51,8 @@ public class LoginTest extends BaseTest {
         excelHelper.setExcelFile("src/test/resources/testdata/UsersData.xlsx", "Sheet1");
 
         dashboardPage = loginPage.loginCRM(
-                excelHelper.getCellData("email", 3),
-                excelHelper.getCellData("password", 3)
+                excelHelper.getCellData("EMAIL", 3),
+                excelHelper.getCellData("PASSWORD", 3)
         );
         loginPage.verifyLoginFail();
         CaptureHelper.captureScreenshot("testLoginWithPasswordInvalid");

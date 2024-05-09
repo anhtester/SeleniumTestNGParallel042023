@@ -6,12 +6,12 @@ import org.testng.annotations.Test;
 
 public class DemoReadProperties {
     @Test
-    public void testReadPropertiesFile(){
+    public void testReadPropertiesFile() {
         PropertiesHelper.loadAllFiles();
 
         System.out.println(ConfigData.URL);
-        System.out.println(PropertiesHelper.getValue("email"));
-        System.out.println(PropertiesHelper.getValue("password"));
+        System.out.println(PropertiesHelper.getValue("EMAIL"));
+        System.out.println(PropertiesHelper.getValue("PASSWORD"));
 
         //Gộp nhiều file
         System.out.println(PropertiesHelper.getValue("key1"));

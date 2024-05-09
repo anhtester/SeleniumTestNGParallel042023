@@ -15,7 +15,7 @@ public class DashboardTest extends BaseTest {
     CustomerPage customerPage;
 
     @Test
-    public void testOpenCustomerPage(){
+    public void testOpenCustomerPage() {
         //Login
         loginPage = new LoginPage();
         dashboardPage = loginPage.loginCRM(ConfigData.EMAIL, ConfigData.PASSWORD);
@@ -28,15 +28,15 @@ public class DashboardTest extends BaseTest {
     }
 
     @Test
-    public void testAdminRole(){
+    public void testAdminRole() {
         loginPage = new LoginPage();
-        dashboardPage = loginPage.loginCRM(PropertiesHelper.getValue("email"), PropertiesHelper.getValue("password"));
+        dashboardPage = loginPage.loginCRM(PropertiesHelper.getValue("EMAIL"), PropertiesHelper.getValue("PASSWORD"));
         loginPage.verifyLoginSuccess();
         dashboardPage.verifyMenuReportDisplay();
     }
 
     @Test
-    public void testProjectRole(){
+    public void testProjectRole() {
         loginPage = new LoginPage();
         dashboardPage = loginPage.loginCRM("project@example.com", "123456");
         loginPage.verifyLoginSuccess();

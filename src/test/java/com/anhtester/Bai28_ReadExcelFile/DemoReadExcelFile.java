@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 public class DemoReadExcelFile {
 
     @Test
-    public void testReadExcelFile(){
+    public void testReadExcelFile() {
         //Khởi tạo đối tượng class ExcelHelper
         ExcelHelper excelHelper = new ExcelHelper();
 
@@ -14,13 +14,13 @@ public class DemoReadExcelFile {
         excelHelper.setExcelFile("src/test/resources/testdata/UsersData.xlsx", "Sheet1");
 
         //Gọi hàm getCellData để lấy giá trị của từng ô trong excel file
-        System.out.println(excelHelper.getCellData("email", 1));
-        System.out.println(excelHelper.getCellData("password", 1));
+        System.out.println(excelHelper.getCellData("EMAIL", 1));
+        System.out.println(excelHelper.getCellData("PASSWORD", 1));
         System.out.println(excelHelper.getCellData(2, 1));
     }
 
     @Test
-    public void testSetDataToExcel(){
+    public void testSetDataToExcel() {
         ExcelHelper excelHelper = new ExcelHelper();
 
         excelHelper.setExcelFile("src/test/resources/testdata/UsersData.xlsx", "Sheet1");

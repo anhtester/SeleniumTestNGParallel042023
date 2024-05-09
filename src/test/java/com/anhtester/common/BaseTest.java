@@ -1,7 +1,6 @@
 package com.anhtester.common;
 
 import com.anhtester.drivers.DriverManager;
-import com.anhtester.helpers.CaptureHelper;
 import com.anhtester.helpers.PropertiesHelper;
 import com.anhtester.listeners.TestListener;
 import org.openqa.selenium.WebDriver;
@@ -11,7 +10,6 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.testng.ITestResult;
 import org.testng.annotations.*;
 
 import java.time.Duration;
@@ -22,7 +20,7 @@ import java.util.Map;
 public class BaseTest {
 
     @BeforeMethod
-    @Parameters({"browser"})
+    @Parameters({"BROWSER"})
     public void createBrowser(@Optional("chrome") String browserName) {
         WebDriver driver = setBrowser(browserName);
 
