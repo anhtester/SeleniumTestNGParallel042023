@@ -110,7 +110,7 @@
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
-            <version>1.9.22</version>
+            <version>1.9.22.1</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
@@ -129,14 +129,14 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
-                    <version>3.2.2</version>
+                    <version>3.2.5</version>
                     <configuration>
                         <suiteXmlFiles>
                             <!-- Call Suite name -->
                             <!--<suiteXmlFile>suites/SuiteLoginTest.xml</suiteXmlFile>-->
                         </suiteXmlFiles>
                         <argLine>
-                            -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.22/aspectjweaver-1.9.22.jar"
+                            -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.22.1/aspectjweaver-1.9.22.1.jar"
                         </argLine>
                         <testFailureIgnore>true</testFailureIgnore>
                         <systemPropertyVariables>
